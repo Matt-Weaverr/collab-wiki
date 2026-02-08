@@ -2,4 +2,6 @@
 /public/assets/uploads/
 /app/core/config.php
 /vendor/
+/public/assets/tinymce
+public/assets/uploads
 
