@@ -53,21 +53,21 @@ function urlSafeDecode($m) {
  return base64_decode(strtr($m, '-_', '+/'));
 }
 
-function sendMail($msg, $to) {
+function sendMail($subject, $msg, $to) {
     $mail = new PHPMailer(true);
 try {
     $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
-    $mail->Username = 'mtweaver2004@gmail.com';
-    $mail->Password = 'rdof corj ykvz molp';
-    $mail->Port = 587;
+    $mail->Host = SMTP_HOST;
+    $mail->Username = SMTP_USERNAME;
+    $mail->Password = SMTP_PASSWORD;
+    $mail->Port = SMTP_PORT;
     $mail->SMTPAuth = true;
 
-    $mail->setFrom('mtweaver2004@gmail.com', 'ConquerEarthMC');
+    $mail->setFrom(EMAIL_FROM, EMAIL_NAME);
     $mail->addAddress($to);
 
     $mail->isHTML(true);
-    $mail->Subject = 'Password Reset';
+    $mail->Subject = $subject;
     $mail->Body    = $msg;
 
     $mail->send();

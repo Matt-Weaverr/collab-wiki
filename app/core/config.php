@@ -10,7 +10,13 @@ const DB_NAME = 'wiki_db';
 const DB_USER = 'root';
 const DB_PASSWORD = '';
 
-const CSRF_TOKEN_SECRET = "vxyeewjqgdnkzwhlafhs";
+const SMTP_HOST = '';
+const SMTP_USERNAME  = '';
+const SMTP_PASSWORD = '';
+const SMTP_PORT = 543;
+
+const EMAIL_FROM = '';
+const EMAIL_NAME = '';
 
 const DEBUG = true;
 

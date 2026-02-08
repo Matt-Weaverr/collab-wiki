@@ -1,1 +1,4 @@
-.idea/
+/public/assets/tinymce/
+/public/assets/uploads/
+/app/core/config.php
+
